@@ -10,9 +10,11 @@ app.use(express.json());
 
 // importing router
 import userRouters from "./routes/userRouter.js";
+import chatRouter from "./routes/chatRouter.js";
 
 // using router
-app.use("/api/user",userRouters);
+app.use("/api/user", userRouters);
+app.use("/api/chat", chatRouter);
 
 app.listen(process.env.PORT, () => {
   console.log(`server is working on port ${process.env.PORT}`);
